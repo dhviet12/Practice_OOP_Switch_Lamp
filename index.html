@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function Switch(name){
+        this.name=name;
+        this.turnSwitch=function(obj){
+            if(obj.status==false) {
+                return obj.status = true;
+            } else {
+                return obj.status =false;
+            }
+        }
+
+    }
+    function Lamp(name) {
+        this.name = name;
+        this.status = false;
+        this.showStt = function () {
+            if (this.status== false)
+                alert('Den dang tat');
+            else {
+                alert('Den dang bat')
+            }
+        }
+    }
+
+    let lamp = new Lamp('Bong den');
+    let button= new Switch('Cong tac');
+    console.log(lamp.name);
+    console.log(button.name);
+   for(i=0;i<10;i++){
+       console.log(button.turnSwitch(lamp));
+   }
+   lamp.showStt();
+   button.turnSwitch(lamp);
+   lamp.showStt();
+   button.turnSwitch(lamp);
+   lamp.showStt();
+
+
+</script>
+
+</body>
+</html>
